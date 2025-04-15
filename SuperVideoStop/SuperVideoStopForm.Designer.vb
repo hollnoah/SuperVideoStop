@@ -23,14 +23,14 @@ Partial Class SuperVideoStopForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.FirstNameTextBox = New System.Windows.Forms.TextBox()
+        Me.LastNameTextBox = New System.Windows.Forms.TextBox()
+        Me.StreetAddressTextBox = New System.Windows.Forms.TextBox()
+        Me.StateTextBox = New System.Windows.Forms.TextBox()
+        Me.ZipcodeTextBox = New System.Windows.Forms.TextBox()
+        Me.PhoneTextBox = New System.Windows.Forms.TextBox()
+        Me.EmailTextBox = New System.Windows.Forms.TextBox()
+        Me.CustomerIDTextBox = New System.Windows.Forms.TextBox()
         Me.FirstNameLabel = New System.Windows.Forms.Label()
         Me.LastNameLabel = New System.Windows.Forms.Label()
         Me.StreetAddressLabel = New System.Windows.Forms.Label()
@@ -46,82 +46,82 @@ Partial Class SuperVideoStopForm
         '
         Me.GroupBox1.Controls.Add(Me.CustomerIDLabel)
         Me.GroupBox1.Controls.Add(Me.EmailLabel)
-        Me.GroupBox1.Controls.Add(Me.TextBox8)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
+        Me.GroupBox1.Controls.Add(Me.CustomerIDTextBox)
+        Me.GroupBox1.Controls.Add(Me.LastNameTextBox)
         Me.GroupBox1.Controls.Add(Me.PhoneLabel)
-        Me.GroupBox1.Controls.Add(Me.TextBox7)
+        Me.GroupBox1.Controls.Add(Me.EmailTextBox)
         Me.GroupBox1.Controls.Add(Me.FirstNameLabel)
-        Me.GroupBox1.Controls.Add(Me.TextBox6)
+        Me.GroupBox1.Controls.Add(Me.PhoneTextBox)
         Me.GroupBox1.Controls.Add(Me.ZipcodeLabel)
-        Me.GroupBox1.Controls.Add(Me.TextBox5)
+        Me.GroupBox1.Controls.Add(Me.ZipcodeTextBox)
         Me.GroupBox1.Controls.Add(Me.LastNameLabel)
-        Me.GroupBox1.Controls.Add(Me.TextBox4)
+        Me.GroupBox1.Controls.Add(Me.StateTextBox)
         Me.GroupBox1.Controls.Add(Me.StateLabel)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
+        Me.GroupBox1.Controls.Add(Me.StreetAddressTextBox)
         Me.GroupBox1.Controls.Add(Me.StreetAddressLabel)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
-        Me.GroupBox1.Location = New System.Drawing.Point(22, 12)
+        Me.GroupBox1.Controls.Add(Me.FirstNameTextBox)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(453, 433)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "GroupBox1"
         '
-        'TextBox1
+        'FirstNameTextBox
         '
-        Me.TextBox1.Location = New System.Drawing.Point(106, 31)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(326, 22)
-        Me.TextBox1.TabIndex = 0
+        Me.FirstNameTextBox.Location = New System.Drawing.Point(106, 31)
+        Me.FirstNameTextBox.Name = "FirstNameTextBox"
+        Me.FirstNameTextBox.Size = New System.Drawing.Size(326, 22)
+        Me.FirstNameTextBox.TabIndex = 0
         '
-        'TextBox2
+        'LastNameTextBox
         '
-        Me.TextBox2.Location = New System.Drawing.Point(106, 81)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(326, 22)
-        Me.TextBox2.TabIndex = 1
+        Me.LastNameTextBox.Location = New System.Drawing.Point(106, 81)
+        Me.LastNameTextBox.Name = "LastNameTextBox"
+        Me.LastNameTextBox.Size = New System.Drawing.Size(326, 22)
+        Me.LastNameTextBox.TabIndex = 1
         '
-        'TextBox3
+        'StreetAddressTextBox
         '
-        Me.TextBox3.Location = New System.Drawing.Point(106, 133)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(326, 22)
-        Me.TextBox3.TabIndex = 2
+        Me.StreetAddressTextBox.Location = New System.Drawing.Point(106, 133)
+        Me.StreetAddressTextBox.Name = "StreetAddressTextBox"
+        Me.StreetAddressTextBox.Size = New System.Drawing.Size(326, 22)
+        Me.StreetAddressTextBox.TabIndex = 2
         '
-        'TextBox4
+        'StateTextBox
         '
-        Me.TextBox4.Location = New System.Drawing.Point(106, 184)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(326, 22)
-        Me.TextBox4.TabIndex = 3
+        Me.StateTextBox.Location = New System.Drawing.Point(106, 184)
+        Me.StateTextBox.Name = "StateTextBox"
+        Me.StateTextBox.Size = New System.Drawing.Size(326, 22)
+        Me.StateTextBox.TabIndex = 3
         '
-        'TextBox5
+        'ZipcodeTextBox
         '
-        Me.TextBox5.Location = New System.Drawing.Point(106, 236)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(326, 22)
-        Me.TextBox5.TabIndex = 4
+        Me.ZipcodeTextBox.Location = New System.Drawing.Point(106, 236)
+        Me.ZipcodeTextBox.Name = "ZipcodeTextBox"
+        Me.ZipcodeTextBox.Size = New System.Drawing.Size(326, 22)
+        Me.ZipcodeTextBox.TabIndex = 4
         '
-        'TextBox6
+        'PhoneTextBox
         '
-        Me.TextBox6.Location = New System.Drawing.Point(106, 286)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(326, 22)
-        Me.TextBox6.TabIndex = 5
+        Me.PhoneTextBox.Location = New System.Drawing.Point(106, 286)
+        Me.PhoneTextBox.Name = "PhoneTextBox"
+        Me.PhoneTextBox.Size = New System.Drawing.Size(326, 22)
+        Me.PhoneTextBox.TabIndex = 5
         '
-        'TextBox7
+        'EmailTextBox
         '
-        Me.TextBox7.Location = New System.Drawing.Point(106, 334)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(326, 22)
-        Me.TextBox7.TabIndex = 6
+        Me.EmailTextBox.Location = New System.Drawing.Point(106, 334)
+        Me.EmailTextBox.Name = "EmailTextBox"
+        Me.EmailTextBox.Size = New System.Drawing.Size(326, 22)
+        Me.EmailTextBox.TabIndex = 6
         '
-        'TextBox8
+        'CustomerIDTextBox
         '
-        Me.TextBox8.Location = New System.Drawing.Point(106, 388)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(326, 22)
-        Me.TextBox8.TabIndex = 7
+        Me.CustomerIDTextBox.Location = New System.Drawing.Point(106, 388)
+        Me.CustomerIDTextBox.Name = "CustomerIDTextBox"
+        Me.CustomerIDTextBox.Size = New System.Drawing.Size(326, 22)
+        Me.CustomerIDTextBox.TabIndex = 7
         '
         'FirstNameLabel
         '
@@ -218,12 +218,12 @@ Partial Class SuperVideoStopForm
     Friend WithEvents StreetAddressLabel As Label
     Friend WithEvents LastNameLabel As Label
     Friend WithEvents FirstNameLabel As Label
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents CustomerIDTextBox As TextBox
+    Friend WithEvents LastNameTextBox As TextBox
+    Friend WithEvents EmailTextBox As TextBox
+    Friend WithEvents PhoneTextBox As TextBox
+    Friend WithEvents ZipcodeTextBox As TextBox
+    Friend WithEvents StateTextBox As TextBox
+    Friend WithEvents StreetAddressTextBox As TextBox
+    Friend WithEvents FirstNameTextBox As TextBox
 End Class
