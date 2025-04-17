@@ -256,9 +256,9 @@ Partial Class SuperVideoStopForm
         '
         Me.DisplayListBox.FormattingEnabled = True
         Me.DisplayListBox.ItemHeight = 16
-        Me.DisplayListBox.Location = New System.Drawing.Point(38, 50)
+        Me.DisplayListBox.Location = New System.Drawing.Point(0, 50)
         Me.DisplayListBox.Name = "DisplayListBox"
-        Me.DisplayListBox.Size = New System.Drawing.Size(303, 180)
+        Me.DisplayListBox.Size = New System.Drawing.Size(411, 212)
         Me.DisplayListBox.TabIndex = 0
         '
         'SuperVideoStopForm
@@ -270,7 +270,7 @@ Partial Class SuperVideoStopForm
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "SuperVideoStopForm"
-        Me.Text = "Form1"
+        Me.Text = "Super Video Stop"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)

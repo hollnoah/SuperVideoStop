@@ -13,9 +13,12 @@ Public Class SuperVideoStopForm
         Try
             FileOpen(fileNumber, filePath, OpenMode.Input)
 
-            Input(fileNumber, currentRecord)
-
-            DisplayListBox.Items.Add(currentRecord)
+            Do Until EOF(fileNumber)
+                Input(fileNumber, currentRecord)
+                If currentRecord <> "" Then
+                    DisplayListBox.Items.Add(currentRecord)
+                End If
+            Loop
 
             FileClose(fileNumber)
         Catch bob As FileNotFoundException
@@ -27,7 +30,6 @@ Public Class SuperVideoStopForm
         End Try
 
     End Sub
-
 
     '*************************************EVENT HANDLERS**********************************************
     Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles ExitButton.Click
