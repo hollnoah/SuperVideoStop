@@ -41,7 +41,7 @@ Partial Class SuperVideoStopForm
         Me.FirstNameTextBox = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ClearButton = New System.Windows.Forms.Button()
         Me.UpdateButton = New System.Windows.Forms.Button()
         Me.ExitButton = New System.Windows.Forms.Button()
         Me.DisplayListBox = New System.Windows.Forms.ListBox()
@@ -217,7 +217,7 @@ Partial Class SuperVideoStopForm
         '
         Me.GroupBox3.Controls.Add(Me.ExitButton)
         Me.GroupBox3.Controls.Add(Me.UpdateButton)
-        Me.GroupBox3.Controls.Add(Me.Button1)
+        Me.GroupBox3.Controls.Add(Me.ClearButton)
         Me.GroupBox3.Location = New System.Drawing.Point(13, 296)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(768, 146)
@@ -225,14 +225,14 @@ Partial Class SuperVideoStopForm
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "GroupBox3"
         '
-        'Button1
+        'ClearButton
         '
-        Me.Button1.Location = New System.Drawing.Point(496, 21)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(130, 89)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.ClearButton.Location = New System.Drawing.Point(496, 21)
+        Me.ClearButton.Name = "ClearButton"
+        Me.ClearButton.Size = New System.Drawing.Size(130, 89)
+        Me.ClearButton.TabIndex = 0
+        Me.ClearButton.Text = "Clear"
+        Me.ClearButton.UseVisualStyleBackColor = True
         '
         'UpdateButton
         '
@@ -300,6 +300,6 @@ Partial Class SuperVideoStopForm
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents ExitButton As Button
     Friend WithEvents UpdateButton As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents ClearButton As Button
     Friend WithEvents DisplayListBox As ListBox
 End Class

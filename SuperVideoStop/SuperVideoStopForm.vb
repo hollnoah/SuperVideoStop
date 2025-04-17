@@ -37,4 +37,9 @@ Public Class SuperVideoStopForm
     Private Sub UpdateButton_Click(sender As Object, e As EventArgs) Handles UpdateButton.Click
         ReadFromFile()
     End Sub
+
+    Private Sub ClearButton_Click(sender As Object, e As EventArgs) Handles ClearButton.Click
+
+        DisplayListBox.Items.Clear()
+    End Sub
 End Class
