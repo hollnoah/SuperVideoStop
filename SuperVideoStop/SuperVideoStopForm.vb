@@ -2,6 +2,10 @@
 'Spring 2025
 'RCET 2265
 'Super Video Stop
+
+Option Strict On
+Option Explicit On
+Option Compare Text
 Imports System.IO
 
 Public Class SuperVideoStopForm
@@ -9,14 +13,28 @@ Public Class SuperVideoStopForm
         Dim filePath As String = "..\..\..\UserData.txt"
         Dim fileNumber As Integer = FreeFile()
         Dim currentRecord As String = ""
+        Dim temp() As String 'use for splitting customer data
+
 
         Try
             FileOpen(fileNumber, filePath, OpenMode.Input)
 
             Do Until EOF(fileNumber)
-                Input(fileNumber, currentRecord)
-                If currentRecord <> "" Then
-                    DisplayListBox.Items.Add(currentRecord)
+                Input(fileNumber, currentRecord) 'read exacrly one record
+                If currentRecord <> "" Then 'ignore blank records
+                    temp = Split(currentRecord, ",")
+                    'DisplayListBox.Items.Add(currentRecord) 'add the record to the list box
+
+                    If temp.Length = 4 Then 'ignore malformed records
+                        temp(0) = Replace(temp(0), "$", "") 'cleaning the first name
+                        DisplayListBox.Items.Add(temp(0))
+                        WriteToFile(temp(0))
+                        WriteToFile(temp(1))
+                        WriteToFile(temp(2))
+                        WriteToFile(temp(3))
+                        WriteToFile(vbNewLine)
+
+                    End If
                 End If
             Loop
 
@@ -28,6 +46,22 @@ Public Class SuperVideoStopForm
             MsgBox(ex.Message & vbNewLine & ex.StackTrace & vbNewLine)
 
         End Try
+
+    End Sub
+
+    Sub WriteToFile(newRecord As String)
+        Dim filePath As String = "..\..\..\CustomerData.txt"
+        Dim fileNumber As Integer = FreeFile()
+
+        Try
+            FileOpen(fileNumber, filePath, OpenMode.Append)
+            Write(fileNumber, newRecord)
+            FileClose(fileNumber)
+
+        Catch ex As Exception
+            MsgBox($"Error writing to {filePath}")
+        End Try
+
 
     End Sub
 
