@@ -23,6 +23,8 @@ Partial Class SuperVideoStopForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.CityLabel = New System.Windows.Forms.Label()
+        Me.CityTextBox = New System.Windows.Forms.TextBox()
         Me.CustomerIDLabel = New System.Windows.Forms.Label()
         Me.EmailLabel = New System.Windows.Forms.Label()
         Me.CustomerIDTextBox = New System.Windows.Forms.TextBox()
@@ -40,19 +42,28 @@ Partial Class SuperVideoStopForm
         Me.StreetAddressLabel = New System.Windows.Forms.Label()
         Me.FirstNameTextBox = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.ButtonNew = New System.Windows.Forms.Button()
+        Me.TextBoxNew = New System.Windows.Forms.TextBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.DisplayListBox = New System.Windows.Forms.ListBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.ExitButton = New System.Windows.Forms.Button()
         Me.UpdateButton = New System.Windows.Forms.Button()
         Me.ClearButton = New System.Windows.Forms.Button()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.CityTextBox = New System.Windows.Forms.TextBox()
-        Me.CityLabel = New System.Windows.Forms.Label()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenTopMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SaveTopMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BackupTopMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitTopMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenCustomerFileDialog = New System.Windows.Forms.OpenFileDialog()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -75,12 +86,27 @@ Partial Class SuperVideoStopForm
         Me.GroupBox1.Controls.Add(Me.StreetAddressTextBox)
         Me.GroupBox1.Controls.Add(Me.StreetAddressLabel)
         Me.GroupBox1.Controls.Add(Me.FirstNameTextBox)
-        Me.GroupBox1.Location = New System.Drawing.Point(13, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(19, 47)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(327, 278)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "GroupBox1"
+        '
+        'CityLabel
+        '
+        Me.CityLabel.AutoSize = True
+        Me.CityLabel.Location = New System.Drawing.Point(67, 108)
+        Me.CityLabel.Name = "CityLabel"
+        Me.CityLabel.Size = New System.Drawing.Size(29, 16)
+        Me.CityLabel.TabIndex = 17
+        Me.CityLabel.Text = "City"
+        '
+        'CityTextBox
+        '
+        Me.CityTextBox.Location = New System.Drawing.Point(102, 105)
+        Me.CityTextBox.Name = "CityTextBox"
+        Me.CityTextBox.Size = New System.Drawing.Size(146, 22)
+        Me.CityTextBox.TabIndex = 16
         '
         'CustomerIDLabel
         '
@@ -212,16 +238,62 @@ Partial Class SuperVideoStopForm
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.ButtonNew)
+        Me.GroupBox2.Controls.Add(Me.TextBoxNew)
         Me.GroupBox2.Controls.Add(Me.ComboBox1)
         Me.GroupBox2.Controls.Add(Me.RadioButton2)
         Me.GroupBox2.Controls.Add(Me.RadioButton1)
         Me.GroupBox2.Controls.Add(Me.DisplayListBox)
-        Me.GroupBox2.Location = New System.Drawing.Point(346, 10)
+        Me.GroupBox2.Location = New System.Drawing.Point(350, 47)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(431, 266)
+        Me.GroupBox2.Size = New System.Drawing.Size(450, 278)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "GroupBox2"
+        '
+        'ButtonNew
+        '
+        Me.ButtonNew.Location = New System.Drawing.Point(407, 21)
+        Me.ButtonNew.Name = "ButtonNew"
+        Me.ButtonNew.Size = New System.Drawing.Size(35, 25)
+        Me.ButtonNew.TabIndex = 3
+        Me.ButtonNew.UseVisualStyleBackColor = True
+        '
+        'TextBoxNew
+        '
+        Me.TextBoxNew.Location = New System.Drawing.Point(288, 22)
+        Me.TextBoxNew.Name = "TextBoxNew"
+        Me.TextBoxNew.Size = New System.Drawing.Size(116, 22)
+        Me.TextBoxNew.TabIndex = 18
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(137, 22)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(145, 24)
+        Me.ComboBox1.TabIndex = 3
+        '
+        'RadioButton2
+        '
+        Me.RadioButton2.AutoSize = True
+        Me.RadioButton2.Location = New System.Drawing.Point(6, 76)
+        Me.RadioButton2.Name = "RadioButton2"
+        Me.RadioButton2.Size = New System.Drawing.Size(109, 20)
+        Me.RadioButton2.TabIndex = 2
+        Me.RadioButton2.TabStop = True
+        Me.RadioButton2.Text = "RadioButton2"
+        Me.RadioButton2.UseVisualStyleBackColor = True
+        '
+        'RadioButton1
+        '
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Location = New System.Drawing.Point(6, 50)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(109, 20)
+        Me.RadioButton1.TabIndex = 1
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "RadioButton1"
+        Me.RadioButton1.UseVisualStyleBackColor = True
         '
         'DisplayListBox
         '
@@ -229,7 +301,7 @@ Partial Class SuperVideoStopForm
         Me.DisplayListBox.ItemHeight = 16
         Me.DisplayListBox.Location = New System.Drawing.Point(137, 48)
         Me.DisplayListBox.Name = "DisplayListBox"
-        Me.DisplayListBox.Size = New System.Drawing.Size(288, 212)
+        Me.DisplayListBox.Size = New System.Drawing.Size(307, 212)
         Me.DisplayListBox.TabIndex = 0
         '
         'GroupBox3
@@ -237,12 +309,11 @@ Partial Class SuperVideoStopForm
         Me.GroupBox3.Controls.Add(Me.ExitButton)
         Me.GroupBox3.Controls.Add(Me.UpdateButton)
         Me.GroupBox3.Controls.Add(Me.ClearButton)
-        Me.GroupBox3.Location = New System.Drawing.Point(13, 296)
+        Me.GroupBox3.Location = New System.Drawing.Point(20, 322)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(768, 146)
+        Me.GroupBox3.Size = New System.Drawing.Size(768, 116)
         Me.GroupBox3.TabIndex = 2
         Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "GroupBox3"
         '
         'ExitButton
         '
@@ -271,51 +342,56 @@ Partial Class SuperVideoStopForm
         Me.ClearButton.Text = "Clear"
         Me.ClearButton.UseVisualStyleBackColor = True
         '
-        'RadioButton1
+        'MenuStrip1
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(6, 50)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(109, 20)
-        Me.RadioButton1.TabIndex = 1
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "RadioButton1"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.HelpToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(800, 28)
+        Me.MenuStrip1.TabIndex = 3
+        Me.MenuStrip1.Text = "MenuStrip1"
         '
-        'RadioButton2
+        'FileToolStripMenuItem
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(6, 76)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(109, 20)
-        Me.RadioButton2.TabIndex = 2
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "RadioButton2"
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenTopMenuItem, Me.SaveTopMenuItem, Me.BackupTopMenuItem, Me.ExitTopMenuItem})
+        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(46, 24)
+        Me.FileToolStripMenuItem.Text = "File"
         '
-        'ComboBox1
+        'OpenTopMenuItem
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(243, 18)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(137, 24)
-        Me.ComboBox1.TabIndex = 3
+        Me.OpenTopMenuItem.Name = "OpenTopMenuItem"
+        Me.OpenTopMenuItem.Size = New System.Drawing.Size(140, 26)
+        Me.OpenTopMenuItem.Text = "Open"
         '
-        'CityTextBox
+        'SaveTopMenuItem
         '
-        Me.CityTextBox.Location = New System.Drawing.Point(102, 105)
-        Me.CityTextBox.Name = "CityTextBox"
-        Me.CityTextBox.Size = New System.Drawing.Size(146, 22)
-        Me.CityTextBox.TabIndex = 16
+        Me.SaveTopMenuItem.Name = "SaveTopMenuItem"
+        Me.SaveTopMenuItem.Size = New System.Drawing.Size(140, 26)
+        Me.SaveTopMenuItem.Text = "Save"
         '
-        'CityLabel
+        'BackupTopMenuItem
         '
-        Me.CityLabel.AutoSize = True
-        Me.CityLabel.Location = New System.Drawing.Point(67, 108)
-        Me.CityLabel.Name = "CityLabel"
-        Me.CityLabel.Size = New System.Drawing.Size(29, 16)
-        Me.CityLabel.TabIndex = 17
-        Me.CityLabel.Text = "City"
+        Me.BackupTopMenuItem.Name = "BackupTopMenuItem"
+        Me.BackupTopMenuItem.Size = New System.Drawing.Size(140, 26)
+        Me.BackupTopMenuItem.Text = "Backup"
+        '
+        'ExitTopMenuItem
+        '
+        Me.ExitTopMenuItem.Name = "ExitTopMenuItem"
+        Me.ExitTopMenuItem.Size = New System.Drawing.Size(140, 26)
+        Me.ExitTopMenuItem.Text = "Exit"
+        '
+        'HelpToolStripMenuItem
+        '
+        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(55, 24)
+        Me.HelpToolStripMenuItem.Text = "Help"
+        '
+        'OpenCustomerFileDialog
+        '
+        Me.OpenCustomerFileDialog.FileName = "OpenCustomerFileDialog"
         '
         'SuperVideoStopForm
         '
@@ -325,6 +401,8 @@ Partial Class SuperVideoStopForm
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "SuperVideoStopForm"
         Me.Text = "Super Video Stop"
         Me.GroupBox1.ResumeLayout(False)
@@ -332,7 +410,10 @@ Partial Class SuperVideoStopForm
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -364,4 +445,14 @@ Partial Class SuperVideoStopForm
     Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents CityLabel As Label
     Friend WithEvents CityTextBox As TextBox
+    Friend WithEvents ButtonNew As Button
+    Friend WithEvents TextBoxNew As TextBox
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OpenCustomerFileDialog As OpenFileDialog
+    Friend WithEvents OpenTopMenuItem As ToolStripMenuItem
+    Friend WithEvents SaveTopMenuItem As ToolStripMenuItem
+    Friend WithEvents BackupTopMenuItem As ToolStripMenuItem
+    Friend WithEvents ExitTopMenuItem As ToolStripMenuItem
 End Class

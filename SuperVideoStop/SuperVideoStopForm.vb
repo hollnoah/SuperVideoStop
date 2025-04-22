@@ -76,6 +76,34 @@ Public Class SuperVideoStopForm
 
     End Sub
 
+    Sub LoadCustomerData()
+        Dim filePath As String = "..\..\..\CustomerData.dat"
+        Dim fileNumber As Integer = FreeFile()
+        Dim currentRecord As String
+
+        Try
+            FileOpen(fileNumber, filePath, OpenMode.Input)
+
+            Do Until EOF(fileNumber)
+                Input(fileNumber, currentRecord)
+                MsgBox(currentRecord)
+
+            Loop
+            FileClose(fileNumber)
+
+        Catch noFile As FileNotFoundException
+            OpenCustomerFileDialog.FileName = ""
+            OpenCustomerFileDialog.InitialDirectory = "C:\Users\noahh\Visual HW\SuperVideoStop"
+            OpenCustomerFileDialog.Filter = "txt files (*txt)|*.txt|All files (*.*)|*.*"
+            OpenCustomerFileDialog.ShowDialog()
+            filePath = OpenCustomerFileDialog.FileName
+            MsgBox($"The current file is {filePath}")
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
     '*************************************EVENT HANDLERS**********************************************
     Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles ExitButton.Click
         Me.Close()
@@ -88,5 +116,9 @@ Public Class SuperVideoStopForm
     Private Sub ClearButton_Click(sender As Object, e As EventArgs) Handles ClearButton.Click
 
         DisplayListBox.Items.Clear()
+    End Sub
+
+    Private Sub OpenTopMenuItem_Click(sender As Object, e As EventArgs) Handles OpenTopMenuItem.Click
+        LoadCustomerData()
     End Sub
 End Class
