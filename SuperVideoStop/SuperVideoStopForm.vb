@@ -80,15 +80,34 @@ Public Class SuperVideoStopForm
         Dim filePath As String = "..\..\..\CustomerData.dat"
         Dim fileNumber As Integer = FreeFile()
         Dim currentRecord As String
+        Dim invalidFileName As Boolean = True
+        Dim customers(NumberOfCustomers(filePath) - 1, 8) As String 'array for customer data
 
         Try
             FileOpen(fileNumber, filePath, OpenMode.Input)
 
             Do Until EOF(fileNumber)
                 Input(fileNumber, currentRecord)
-                MsgBox(currentRecord)
+                customers(0, 0) = currentRecord 'first name
+                Input(fileNumber, currentRecord)
+                customers(0, 1) = currentRecord 'last name
+                Input(fileNumber, currentRecord)
+                customers(0, 2) = currentRecord 'address
+                Input(fileNumber, currentRecord)
+                customers(0, 3) = currentRecord 'city
+                Input(fileNumber, currentRecord)
+                customers(0, 4) = currentRecord 'state
+                Input(fileNumber, currentRecord)
+                customers(0, 5) = currentRecord 'zip
+                Input(fileNumber, currentRecord)
+                customers(0, 6) = currentRecord 'phone number
+                Input(fileNumber, currentRecord)
+                customers(0, 7) = currentRecord 'email
+                Input(fileNumber, currentRecord)
+                customers(0, 8) = currentRecord 'customer ID
 
             Loop
+            ' MsgBox($"There are {NumberOfCustomers(filePath)} customers")
             FileClose(fileNumber)
 
         Catch noFile As FileNotFoundException
@@ -103,6 +122,28 @@ Public Class SuperVideoStopForm
             MsgBox(ex.Message)
         End Try
     End Sub
+
+    Function NumberOfCustomers(fileName As String) As Integer
+        Dim count As Integer = 0
+        Dim fileNumber As Integer = FreeFile()
+
+        Try
+            FileOpen(fileNumber, fileName, OpenMode.Input)
+            Do Until EOF(fileNumber)
+                count += 1
+            Loop
+            LineInput(fileNumber)
+
+            FileClose(fileNumber)
+        Catch ex As Exception
+            'pass
+            'maybe set count to -1 to indicate error
+        End Try
+
+        Return count
+    End Function
+
+
 
     '*************************************EVENT HANDLERS**********************************************
     Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles ExitButton.Click
