@@ -9,6 +9,16 @@ Option Compare Text
 Imports System.IO
 
 Public Class SuperVideoStopForm
+
+    Function Customers(Optional customerData(,) As String = Nothing) As String(,)
+        Static _customers(,) As String
+
+        If customerData IsNot Nothing Then
+            _customers = customerData
+
+        End If
+        Return _customers
+    End Function
     Sub ReadFromFile()
         Dim filePath As String = "..\..\..\UserData.txt"
         Dim fileNumber As Integer = FreeFile()
@@ -82,7 +92,7 @@ Public Class SuperVideoStopForm
         Dim currentRecord As String
         Dim invalidFileName As Boolean = True
         Dim customers(NumberOfCustomers(filePath) - 1, 8) As String 'array for customer data
-
+        Dim currentCustomer As Integer = 0
         Try
             FileOpen(fileNumber, filePath, OpenMode.Input)
 
@@ -161,5 +171,15 @@ Public Class SuperVideoStopForm
 
     Private Sub OpenTopMenuItem_Click(sender As Object, e As EventArgs) Handles OpenTopMenuItem.Click
         LoadCustomerData()
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+        Dim temp() As String
+
+        temp = Split(ComboBox1.SelectedIndex.ToString, ",")
+
+        temp(1) = temp(1).Trim() 'remove whitespace from both ends of string
+
+        MsgBox($"the first name is: {temp(1)} and the last name is: {temp(0)}")
     End Sub
 End Class
